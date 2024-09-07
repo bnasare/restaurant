@@ -20,7 +20,7 @@ A Flutter application for browsing and searching restaurants. This app utilizes 
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/your-username/restaurant-app.git
+    git clone https://github.com/bnasare/restaurant-app.git
     ```
 2. Navigate to the project directory
     ```bash
