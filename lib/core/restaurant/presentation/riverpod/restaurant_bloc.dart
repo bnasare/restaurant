@@ -5,19 +5,20 @@ import 'package:restaurant/core/restaurant/domain/usecases/search_restaurant.dar
 import '../../../../shared/error/failure.dart';
 import '../../domain/entities/restaurant.dart';
 
-class RestaturantProvider {
+class RestaurantBloc {
   final GetRestaurantListUseCase getRestaurantListUseCase;
   final SearchRestaurantUseCase searchRestaurantUseCase;
 
-  RestaturantProvider(
+  RestaurantBloc(
       {required this.getRestaurantListUseCase,
       required this.searchRestaurantUseCase});
 
-Future<Either<Failure, List<Restaurant>>> getRestaurants() async {
-  return getRestaurantListUseCase.call();
-}
+  Future<Either<Failure, List<Restaurant>>> getRestaurants() async {
+    return getRestaurantListUseCase.call();
+  }
 
-  List<Restaurant> searchRestaurants(String query, List<Restaurant> restaurants) {
+  List<Restaurant> searchRestaurants(
+      String query, List<Restaurant> restaurants) {
     return searchRestaurantUseCase.call(query, restaurants);
   }
 }

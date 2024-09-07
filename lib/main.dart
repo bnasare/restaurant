@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import 'injection_container.dart' as di;
-import 'shared/presentation/theme/theme.dart';
-import 'src/home/presentation/screens/home.dart';
+import 'package:restaurant/injection_container.dart' as di;
+import 'package:restaurant/shared/presentation/theme/theme.dart';
+import 'package:restaurant/src/home/presentation/interface/screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

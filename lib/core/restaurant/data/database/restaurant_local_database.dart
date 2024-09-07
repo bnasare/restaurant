@@ -11,7 +11,7 @@ abstract class RestaurantLocalDatabase {
 class RestaurantLocalDatabaseImpl implements RestaurantLocalDatabase {
   @override
   Future<List<Restaurant>> getRestaurants() async {
-    final jsonString = await rootBundle.loadString('assets/restaurant.json');
+    final jsonString = await rootBundle.loadString('assets/restaurants.json');
     final List<dynamic> jsonResponse = json.decode(jsonString);
     return jsonResponse.map((data) => Restaurant.fromJson(data)).toList();
   }
