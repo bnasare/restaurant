@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart'; // Import Riverpod
 import 'package:restaurant/injection_container.dart' as di;
 import 'package:restaurant/shared/presentation/theme/theme.dart';
 import 'package:restaurant/src/home/presentation/interface/screens/home_screen.dart';
@@ -8,7 +9,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(const MyApp());
+
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: lightTheme,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home:  HomeScreen(),
     );
   }
 }

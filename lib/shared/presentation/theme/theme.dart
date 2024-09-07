@@ -48,7 +48,7 @@ ThemeData lightTheme = ThemeData(
     color: Colors.transparent,
     elevation: 0,
     centerTitle: true,
-    scrolledUnderElevation: 0.5,
+    scrolledUnderElevation: 0,
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: const TextStyle(fontSize: 14.0, color: ExtraColors.grey),
