@@ -6,6 +6,7 @@ import 'package:restaurant/src/home/presentation/interface/widgets/search_bar.da
 
 import '../../../../../core/restaurant/presentation/riverpod/restaurant_mixin.dart';
 import '../../../../../core/restaurant/presentation/riverpod/restaurant_provider.dart';
+import '../../../../../shared/presentation/theme/extra_colors.dart';
 import '../widgets/error_view.dart';
 import '../widgets/restaurant_list.dart';
 
@@ -47,7 +48,7 @@ class HomeScreen extends ConsumerWidget with RestaurantMixin {
             child: Divider(
               height: 1.0,
               thickness: 1.0,
-              color: Colors.grey[300],
+              color: ExtraColors.grey.withOpacity(0.2),
             ),
           ),
         ),
