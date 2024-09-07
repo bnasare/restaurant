@@ -1,8 +1,8 @@
 class ImageAssets {
-  static const String warning = 'assets/static/warning.png';
-  static const String error = 'assets/static/error.png';
-  static const String success = 'assets/static/success.png';
-  static const String info = 'assets/static/info.png';
-  static const String google = 'assets/static/google.png';
-  static const String apple = 'assets/static/apple.png';
+  static const String warning = 'assets/images/warning.png';
+  static const String error = 'assets/images/error.png';
+  static const String success = 'assets/images/success.png';
+  static const String info = 'assets/images/info.png';
+  static const String google = 'assets/images/google.png';
+  static const String apple = 'assets/images/apple.png';
 }
